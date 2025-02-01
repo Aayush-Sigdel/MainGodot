@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhl3u8ln2f3up"]
+[gd_scene load_steps=8 format=3 uid="uid://dhl3u8ln2f3up"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://cyogl5vchj0jk" path="res://00- pong/new_physics_material.tres" id="1_jrvwn"]
 [ext_resource type="Script" uid="uid://8iww5tkovb3a" path="res://00- pong/Script/Player.cs" id="2_jrvwn"]
 [ext_resource type="Script" uid="uid://c6tpryrh6w8tg" path="res://00- pong/Script/Ball.cs" id="3_jrvwn"]
 
@@ -42,6 +43,7 @@ grow_vertical = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 10)
+physics_material_override = ExtResource("1_jrvwn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(575.5, 2.5)
@@ -52,6 +54,7 @@ polygon = PackedVector2Array(-22, -10, -22, 15, 1173, 15, 1173, -10)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(0, 634)
+physics_material_override = ExtResource("1_jrvwn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(575.5, 2.5)

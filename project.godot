@@ -24,7 +24,8 @@ project/assembly_name="Learning"
 folder_colors={
 "res://00- pong/": "red",
 "res://00- pong/Scene/": "orange",
-"res://00- pong/Script/": "yellow"
+"res://00- pong/Script/": "yellow",
+"res://Main Assets/": "purple"
 }
 
 [input]

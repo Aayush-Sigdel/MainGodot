@@ -12,10 +12,10 @@ public partial class Player : CharacterBody2D
 	{
 		Vector2 velocity = Velocity;
 
-		if (Input.IsActionPressed($"up{PlayerId}"))
+		if (Input.IsActionPressed("up"+PlayerId))
 		{
 			velocity.Y -= PlayerVelocity;
-		}else if (Input.IsActionPressed($"down{PlayerId}"))
+		}else if (Input.IsActionPressed("down"+PlayerId))
 		{
 			velocity.Y += PlayerVelocity;
 		}
