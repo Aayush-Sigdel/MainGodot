@@ -1,0 +1,321 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1go53tpm8504"]
+
+[ext_resource type="PackedScene" uid="uid://bs3qmobddk3bm" path="res://01- Click_Navigation/Assets/tank.tscn" id="1_cfext"]
+[ext_resource type="Script" uid="uid://dpqeik428yvn0" path="res://01- Click_Navigation/Script/Tank.cs" id="2_faqiq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_wfcf7"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_faqiq"]
+vertices = PackedVector2Array(267.953, 204.688, 275.383, 177, 422, 165.383, 579.313, 159.953, 607, 167.383, 457, 189.617, 359.953, 22.3125, 357.641, 20, 1126, 20, 20, 20, 266.359, 20, 264.047, 22.3125, 1126, 629, 1010.38, 538, 1002.95, 510.313, 982.688, 490.047, 1002.95, 565.688, 367.383, 50, 607, 56.6172, 256.617, 50, 512.383, 245, 504.953, 217.313, 634.688, 159.953, 878.688, 421.047, 851, 413.617, 955, 482.617, 927.313, 490.047, 908.688, 491.047, 901.008, 488.992, 906.383, 469, 706.313, 494.047, 687.688, 495.047, 680.008, 492.992, 685.383, 473, 734, 486.617, 485.313, 497.047, 466.688, 498.047, 459.008, 495.992, 464.383, 476, 513, 489.617, 260.313, 501.047, 241.688, 502.047, 234.008, 499.992, 239.383, 480, 288, 493.617, 917.5, 499.859, 780.313, 491.047, 769.5, 501.859, 761.688, 494.047, 696.5, 503.859, 559.313, 495.047, 549, 505.359, 540.688, 497.047, 574.617, 473, 475.5, 506.859, 338.313, 498.047, 325.5, 510.859, 315.688, 501.047, 353.617, 476, 250.5, 510.859, 168.688, 597.953, 177.5, 589.141, 186.313, 597.953, 241.688, 597.953, 251.5, 588.141, 260.313, 596.953, 315.688, 596.953, 328.5, 584.141, 338.313, 593.953, 393.688, 593.953, 402.5, 585.141, 411.313, 593.953, 466.688, 593.953, 476.5, 584.141, 485.313, 592.953, 540.688, 592.953, 551, 582.641, 559.313, 590.953, 614.688, 590.953, 623.5, 582.141, 632.313, 590.953, 687.688, 590.953, 697.5, 581.141, 706.313, 589.953, 761.688, 589.953, 772.5, 579.141, 780.313, 586.953, 835.688, 586.953, 844.5, 578.141, 853.313, 586.953, 908.688, 586.953, 918.5, 577.141, 927.313, 585.953, 504.953, 272.688, 795.617, 469, 800.109, 485.727, 657.688, 425.047, 579.109, 489.727, 358.109, 492.727, 128.617, 480, 133.109, 496.727, 113.313, 502.047, 662.383, 112, 654.953, 84.3125, 477.383, 110, 559.047, 84.3125, 551.617, 112, 469.953, 137.688, 469.953, 82.3125, 579.313, 64.0469, 559.047, 139.688, 449.688, 157.953, 982.688, 585.953, 264.047, 77.6875, 654.953, 139.688, 898.953, 441.313, 823.313, 421.047, 803.047, 441.313, 677.953, 445.313, 456.953, 448.313, 582.047, 445.313, 231.953, 452.313, 361.047, 448.313, 634.688, 64.0469, 211.688, 432.047, 381.313, 428.047, 436.688, 428.047, 602.313, 425.047, 449.688, 62.0469, 955, 593.383, 20, 629, 881, 594.383, 284.313, 97.9531, 220, 121.617, 192.313, 129.047, 484.688, 197.047, 429.313, 197.047, 409.047, 217.313, 401.617, 245, 247.688, 224.953, 409.047, 272.688, 220, 232.383, 184, 424.617, 429.313, 292.953, 409, 420.617, 808, 594.383, 734, 597.383, 366, 601.383, 288, 604.383, 587, 598.383, 513, 600.383, 422, 54.6172, 136.047, 452.313, 93.0469, 522.313, 214, 605.383, 439, 601.383, 660, 598.383, 630, 417.617, 457, 300.383, 394.313, 157.953, 374.047, 137.688, 267.953, 149.313, 366.617, 110, 247.688, 129.047, 312, 105.383, 141, 605.383, 113.313, 597.953, 93.0469, 577.688, 85.6172, 550, 156.313, 432.047, 164.617, 177, 172.047, 204.688, 394.313, 62.0469, 374.047, 82.3125, 359.953, 77.6875, 339.688, 97.9531, 172.047, 149.313, 192.313, 224.953, 484.688, 292.953)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 11), PackedInt32Array(8, 12, 13, 14), PackedInt32Array(8, 14, 15), PackedInt32Array(16, 13, 12), PackedInt32Array(17, 6, 8, 18), PackedInt32Array(9, 11, 19), PackedInt32Array(20, 21, 22, 8, 23, 24), PackedInt32Array(25, 26, 27, 28, 29, 8), PackedInt32Array(30, 31, 32, 33, 34), PackedInt32Array(35, 36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43, 44), PackedInt32Array(26, 45, 27), PackedInt32Array(46, 47, 48), PackedInt32Array(30, 49, 31), PackedInt32Array(50, 51, 52, 53), PackedInt32Array(35, 54, 36), PackedInt32Array(55, 56, 57, 58), PackedInt32Array(40, 59, 41), PackedInt32Array(60, 61, 62), PackedInt32Array(63, 64, 65), PackedInt32Array(66, 67, 68), PackedInt32Array(69, 70, 71), PackedInt32Array(72, 73, 74), PackedInt32Array(75, 76, 77), PackedInt32Array(78, 79, 80), PackedInt32Array(81, 82, 83), PackedInt32Array(84, 85, 86), PackedInt32Array(87, 88, 89), PackedInt32Array(90, 91, 92), PackedInt32Array(93, 94, 95, 46, 48, 34, 96), PackedInt32Array(53, 97, 50), PackedInt32Array(58, 98, 55), PackedInt32Array(99, 100, 101), PackedInt32Array(8, 15, 25), PackedInt32Array(8, 102, 103), PackedInt32Array(104, 105, 106, 107), PackedInt32Array(105, 104, 108, 109), PackedInt32Array(107, 106, 110, 111), PackedInt32Array(112, 16, 12), PackedInt32Array(9, 19, 113), PackedInt32Array(114, 102, 8), PackedInt32Array(8, 29, 115), PackedInt32Array(8, 115, 23), PackedInt32Array(20, 24, 116), PackedInt32Array(20, 116, 117, 93), PackedInt32Array(93, 117, 94), PackedInt32Array(34, 33, 118), PackedInt32Array(39, 38, 119, 120, 53, 52), PackedInt32Array(44, 43, 121, 122, 58, 57), PackedInt32Array(8, 103, 123), PackedInt32Array(122, 121, 124, 125), PackedInt32Array(120, 119, 126, 127), PackedInt32Array(109, 108, 128), PackedInt32Array(111, 110, 3, 2), PackedInt32Array(129, 112, 12), PackedInt32Array(129, 12, 130, 131), PackedInt32Array(9, 113, 132, 133, 134), PackedInt32Array(22, 114, 8), PackedInt32Array(4, 22, 21), PackedInt32Array(4, 21, 135), PackedInt32Array(4, 135, 5), PackedInt32Array(0, 5, 136), PackedInt32Array(0, 136, 137), PackedInt32Array(0, 137, 138, 139), PackedInt32Array(139, 138, 140, 141), PackedInt32Array(142, 141, 140, 143, 144, 125, 124), PackedInt32Array(84, 86, 145, 146), PackedInt32Array(66, 68, 147, 148), PackedInt32Array(75, 77, 149, 150), PackedInt32Array(8, 123, 18), PackedInt32Array(17, 18, 109, 151), PackedInt32Array(152, 99, 101, 153, 9), PackedInt32Array(63, 65, 148, 154), PackedInt32Array(72, 74, 150, 155), PackedInt32Array(81, 83, 146, 156), PackedInt32Array(90, 92, 129, 131), PackedInt32Array(157, 127, 126, 144, 143, 158), PackedInt32Array(159, 2, 1), PackedInt32Array(160, 159, 1, 161), PackedInt32Array(162, 160, 161, 163), PackedInt32Array(162, 163, 133, 164), PackedInt32Array(165, 60, 62, 154), PackedInt32Array(147, 69, 71, 155), PackedInt32Array(149, 78, 80, 156), PackedInt32Array(145, 87, 89, 131), PackedInt32Array(145, 131, 130, 146), PackedInt32Array(156, 146, 130), PackedInt32Array(149, 156, 130, 150), PackedInt32Array(155, 150, 130), PackedInt32Array(147, 155, 130, 148), PackedInt32Array(154, 148, 130), PackedInt32Array(165, 154, 130), PackedInt32Array(166, 165, 130), PackedInt32Array(167, 166, 130), PackedInt32Array(168, 167, 130), PackedInt32Array(168, 130, 9, 153), PackedInt32Array(169, 152, 9), PackedInt32Array(142, 169, 9, 170, 171), PackedInt32Array(109, 128, 151), PackedInt32Array(17, 151, 172), PackedInt32Array(17, 172, 173, 174), PackedInt32Array(174, 173, 162, 175), PackedInt32Array(164, 175, 162), PackedInt32Array(132, 164, 133), PackedInt32Array(9, 134, 176), PackedInt32Array(9, 176, 170), PackedInt32Array(142, 171, 177), PackedInt32Array(142, 177, 141), PackedInt32Array(157, 158, 178), PackedInt32Array(157, 178, 93, 96), PackedInt32Array(96, 34, 118)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 649, 1146, 649, 1146, 0, 0, 0)])
+agent_radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jxesr"]
+custom_solver_bias = 0.735
+radius = 34.67
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2itfj"]
+
+[node name="Lucher" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.300282, 0.391816, 0.344294, 1)
+position = Vector2(573, 324.5)
+scale = Vector2(1146, 649)
+texture = SubResource("CanvasTexture_wfcf7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 325)
+scale = Vector2(0.166667, 0.166667)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_faqiq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(422, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(312, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D2"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D2"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(220, 177)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D3"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D3"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(457, 245)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D4"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D4"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(607, 112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D5"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D5"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(141, 550)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D6"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D6"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(214, 550)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D7"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D7"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(184, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D8"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D8"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(288, 549)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D9"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D9"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(288, 549)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D10"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D10"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(366, 546)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D11"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D11"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(439, 546)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D12"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D12"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(409, 476)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D13"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D13"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(513, 545)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D14"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D14"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(513, 545)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D15"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D15"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(587, 543)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D16"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D16"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(660, 543)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D17"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D17"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(630, 473)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D18"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D18"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(734, 542)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D19"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D19"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(734, 542)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D20"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D20"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(808, 539)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D21"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D21"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(881, 539)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D22"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D22"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D23" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(851, 469)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D23"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D23"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D24" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(955, 538)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D24"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D24"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="StaticBody2D25" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(955, 538)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D25"]
+shape = SubResource("CircleShape2D_jxesr")
+
+[node name="Sprite2D" type="Sprite2D" parent="NavigationRegion2D/StaticBody2D25"]
+position = Vector2(-0.49999, -9.53674e-07)
+scale = Vector2(51, 44)
+texture = SubResource("CanvasTexture_2itfj")
+
+[node name="Tank" parent="." node_paths=PackedStringArray("_navigationAgent") instance=ExtResource("1_cfext")]
+position = Vector2(263, 345)
+motion_mode = 1
+script = ExtResource("2_faqiq")
+_navigationAgent = NodePath("NavigationAgent2D")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Tank"]
+avoidance_enabled = true
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0, 1, 1, 1)
+debug_path_custom_line_width = 2.0

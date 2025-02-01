@@ -1,0 +1,130 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhl3u8ln2f3up"]
+
+[ext_resource type="Script" uid="uid://8iww5tkovb3a" path="res://00- pong/Script/Player.cs" id="2_jrvwn"]
+[ext_resource type="Script" uid="uid://c6tpryrh6w8tg" path="res://00- pong/Script/Ball.cs" id="3_jrvwn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_be6h5"]
+size = Vector2(1195, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7s2ba"]
+size = Vector2(14, 65)
+
+[sub_resource type="SphereMesh" id="SphereMesh_jrvwn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ffccl"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="back" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.190762, 0.190762, 0.190762, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(575.5, 2.5)
+shape = SubResource("RectangleShape2D_be6h5")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-22, -10, -22, 15, 1173, 15, 1173, -10)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(0, 634)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(575.5, 2.5)
+shape = SubResource("RectangleShape2D_be6h5")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(-22, -10, -22, 15, 1173, 15, 1173, -10)
+
+[node name="player1" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_scoreLabel")]
+position = Vector2(71, 318)
+motion_mode = 1
+script = ExtResource("2_jrvwn")
+PlayerId = 1
+_scoreLabel = NodePath("../HBoxContainer/Label")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player1"]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_7s2ba")
+
+[node name="Polygon2D" type="Polygon2D" parent="player1"]
+polygon = PackedVector2Array(-10, -33, 4, -33, 4, 32, -10, 32)
+
+[node name="Player2" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_scoreLabel")]
+position = Vector2(1098, 318)
+motion_mode = 1
+script = ExtResource("2_jrvwn")
+PlayerId = 2
+_scoreLabel = NodePath("../HBoxContainer/Label2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_7s2ba")
+
+[node name="Polygon2D" type="Polygon2D" parent="Player2"]
+polygon = PackedVector2Array(-10, -33, 4, -33, 4, 32, -10, 32)
+
+[node name="ball" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_player1", "_player2")]
+position = Vector2(267, 226)
+motion_mode = 1
+script = ExtResource("3_jrvwn")
+_player1 = NodePath("../player1")
+_player2 = NodePath("../Player2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="ball"]
+position = Vector2(-9.53674e-07, 2.98023e-06)
+scale = Vector2(20.0227, 20)
+mesh = SubResource("SphereMesh_jrvwn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
+shape = SubResource("CircleShape2D_ffccl")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="ball"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 40.0
+offset_bottom = 63.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 30
+text = "Player1 = 00"
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 30
+text = "Player2 = 00"
+
+[connection signal="screen_exited" from="ball/VisibleOnScreenNotifier2D" to="ball" method="_on_screen_exited"]
