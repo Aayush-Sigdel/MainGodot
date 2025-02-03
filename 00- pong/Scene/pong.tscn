@@ -92,7 +92,7 @@ shape = SubResource("RectangleShape2D_7s2ba")
 polygon = PackedVector2Array(-10, -33, 4, -33, 4, 32, -10, 32)
 
 [node name="ball" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_player1", "_player2")]
-position = Vector2(267, 226)
+position = Vector2(577, 318)
 motion_mode = 1
 script = ExtResource("3_jrvwn")
 _player1 = NodePath("../player1")
