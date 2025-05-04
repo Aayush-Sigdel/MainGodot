@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct2iwwwluaw6l"]
+
+[ext_resource type="Script" path="res://04- WaterPhysics3D/script/Boat.cs" id="1_g4k25"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xgsv0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mlb7w"]
+size = Vector3(1.96147, 0.220703, 0.721436)
+
+[node name="boat" type="CharacterBody3D" node_paths=PackedStringArray("arm")]
+script = ExtResource("1_g4k25")
+arm = NodePath("arm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.98806, 0, 0, 0, 0.226915, 0, 0, 0, 0.713433, 0, -0.0606728, 0)
+mesh = SubResource("BoxMesh_xgsv0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0134354, -0.0527344, 0.00500488)
+shape = SubResource("BoxShape3D_mlb7w")
+
+[node name="arm" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="arm"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1, 2)

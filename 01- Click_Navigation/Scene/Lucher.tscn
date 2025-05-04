@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1go53tpm8504"]
 
 [ext_resource type="PackedScene" uid="uid://bs3qmobddk3bm" path="res://01- Click_Navigation/Assets/tank.tscn" id="1_cfext"]
-[ext_resource type="Script" uid="uid://dpqeik428yvn0" path="res://01- Click_Navigation/Script/Tank.cs" id="2_faqiq"]
+[ext_resource type="Script" path="res://01- Click_Navigation/Script/Tank.cs" id="2_faqiq"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_wfcf7"]
 

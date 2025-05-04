@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cn1q0xcs5b6np"]
+
+[ext_resource type="Shader" uid="uid://7my2i87o3ei0" path="res://04- WaterPhysics3D/Scene/main.tres" id="1_w1g8c"]
+[ext_resource type="PackedScene" uid="uid://ct2iwwwluaw6l" path="res://03- charactermovement/boat.tscn" id="2_3ieiw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l2aam"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_1yvms"]
+sky_material = SubResource("ProceduralSkyMaterial_l2aam")
+
+[sub_resource type="Environment" id="Environment_mg2ml"]
+background_mode = 2
+sky = SubResource("Sky_1yvms")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yw7cg"]
+render_priority = 0
+shader = ExtResource("1_w1g8c")
+shader_parameter/ColorParameter = Color(0, 0.32549, 1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ddihb"]
+material = SubResource("ShaderMaterial_yw7cg")
+size = Vector2(10, 10)
+subdivide_width = 20
+subdivide_depth = 20
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mg2ml")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+size = Vector3(10, 10, 10)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0100098, 0.280243, -0.0103607)
+operation = 2
+size = Vector3(9.32764, 9.59375, 9.55368)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh = SubResource("PlaneMesh_ddihb")
+skeleton = NodePath("../CSGBox3D")
+
+[node name="boat" parent="." instance=ExtResource("2_3ieiw")]

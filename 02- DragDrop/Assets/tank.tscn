@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsh0glwfwp5q7"]
 
-[ext_resource type="Script" uid="uid://cwh38w37h0i05" path="res://02- DragDrop/Script/playertank.cs" id="1_368fm"]
+[ext_resource type="Script" path="res://02- DragDrop/Script/playertank.cs" id="1_368fm"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_cfext"]
 
