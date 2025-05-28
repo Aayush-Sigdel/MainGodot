@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw75sgsqnsq0w"]
+
+[ext_resource type="PackedScene" uid="uid://b8bvjeg5d3crr" path="res://05-FlappyBird/scenes/background.tscn" id="1_tidyb"]
+[ext_resource type="Script" uid="uid://tglk23b4ht2o" path="res://05-FlappyBird/script/obs_manager.gd" id="3_vekul"]
+[ext_resource type="PackedScene" uid="uid://cpqawebmfvepx" path="res://05-FlappyBird/scenes/character.tscn" id="4_hrye0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrye0"]
+size = Vector2(1159.5, 66)
+
+[node name="Luncher" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="." instance=ExtResource("1_tidyb")]
+
+[node name="Character" parent="." instance=ExtResource("4_hrye0")]
+position = Vector2(-293, 0)
+motion_mode = 1
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.75, 356)
+shape = SubResource("RectangleShape2D_hrye0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2, -357)
+shape = SubResource("RectangleShape2D_hrye0")
+
+[node name="obs_manager" type="Node2D" parent="."]
+position = Vector2(678, -324)
+script = ExtResource("3_vekul")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="body_entered" from="StaticBody2D" to="Character" method="_on_static_body_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="obs_manager" method="_on_timer_timeout"]

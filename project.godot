@@ -12,8 +12,12 @@ config_version=5
 
 config/name="Learning"
 run/main_scene="uid://dhl3u8ln2f3up"
-config/features=PackedStringArray("4.3", "C#", "Forward Plus")
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Scoremanager="*res://Global/script/scoremanager.gd"
 
 [dotnet]
 
@@ -25,7 +29,7 @@ folder_colors={
 "res://00- pong/": "red",
 "res://00- pong/Scene/": "orange",
 "res://00- pong/Script/": "yellow",
-"res://Main Assets/": "purple"
+"res://Global/Main Assets/": "purple"
 }
 
 [input]

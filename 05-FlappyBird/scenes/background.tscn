@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8bvjeg5d3crr"]
+
+[ext_resource type="Texture2D" uid="uid://c06kec3o7n5xt" path="res://05-FlappyBird/Assets/1.png" id="1_1ryn1"]
+[ext_resource type="Texture2D" uid="uid://1l5bd6a5poe8" path="res://05-FlappyBird/Assets/2.png" id="2_7fk2m"]
+[ext_resource type="Texture2D" uid="uid://cof5rmf3oemnh" path="res://05-FlappyBird/Assets/3.png" id="3_y7tvh"]
+[ext_resource type="Texture2D" uid="uid://b1mia4ul47x1i" path="res://05-FlappyBird/Assets/4.png" id="4_vu5x7"]
+[ext_resource type="Texture2D" uid="uid://ds5xngbpshhd0" path="res://05-FlappyBird/Assets/5.png" id="5_k0uxj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="water" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(1148, 0)
+autoscroll = Vector2(-80, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="water"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_1ryn1")
+
+[node name="fish" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(1148, 0)
+autoscroll = Vector2(-80, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="fish"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_7fk2m")
+
+[node name="rock" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.5, 1.5)
+repeat_size = Vector2(1148, 0)
+autoscroll = Vector2(-80, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="rock"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_y7tvh")
+
+[node name="buttom" type="Parallax2D" parent="."]
+scroll_scale = Vector2(2, 2)
+repeat_size = Vector2(1148, 0)
+autoscroll = Vector2(-80, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="buttom"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_vu5x7")
+
+[node name="coral" type="Parallax2D" parent="."]
+scroll_scale = Vector2(6, 6)
+repeat_size = Vector2(1148, 0)
+autoscroll = Vector2(-80, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="coral"]
+scale = Vector2(1.994, 2)
+texture = ExtResource("5_k0uxj")
