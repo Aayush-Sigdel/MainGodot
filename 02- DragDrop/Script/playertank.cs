@@ -17,27 +17,13 @@ public partial class playertank : CharacterBody2D
 		 Rotation = Mathf.LerpAngle(Rotation, targetRotation, 10.0f * (float)delta);
 		
 		// navigating through navigation field
-		if (Input.IsActionJustPressed("mouse.left"))
+		if (Input.IsActionPressed("mouse.left"))
 		{
 			var map = _navigationAgent.GetNavigationMap();
 			Vector2 p = GetGlobalMousePosition(); 
 			Vector2 closestPoint = NavigationServer2D.MapGetClosestPoint(map, p);
 			_navigationAgent.TargetPosition = closestPoint;	
-		}
-
-		if (_mouseOver && Input.IsActionPressed("mouse.right") == true)
-		{
-			Position = GetGlobalMousePosition();
-			_collisionShape.Scale = new Vector2(64f, 64f);
-		}
-		else
-		{
-			_collisionShape.Scale = new Vector2(6f, 6f);
-		}
-		
-		
-		
-		
+		}	
 		MoveTowards();
 		
 	}

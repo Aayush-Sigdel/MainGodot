@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl3amgi7huhrg"]
+
+[ext_resource type="Texture2D" uid="uid://lshdgv4du78l" path="res://06-BrickBraker/Assets/brick.png" id="1_3c71r"]
+[ext_resource type="Script" uid="uid://snb24l4me6l2" path="res://06-BrickBraker/scripts/bricks.gd" id="1_mi66q"]
+
+[node name="Bricks" type="RigidBody2D"]
+input_pickable = true
+gravity_scale = 0.0
+script = ExtResource("1_mi66q")
+isNormalBlock = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3c71r")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-4.76837e-07, 0.499992)
+scale = Vector2(0.979167, 0.9375)
+polygon = PackedVector2Array(-30, 0, -30, 16, 30, 16, 30, 0)

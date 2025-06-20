@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbsu2a8hsgoa7"]
+
+[ext_resource type="Script" uid="uid://clm0dl00y8tfb" path="res://07-SandSimulator/luncher.gd" id="1_1w286"]
+
+[node name="Luncher" type="Node2D"]
+script = ExtResource("1_1w286")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(256, 0, 256, 512, 896, 512, 896, 0, 960, 0, 960, 576, 192, 576, 192, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(256, 0, 256, 512, 896, 512, 896, 0, 960, 0, 960, 576, 192, 576, 192, 0)

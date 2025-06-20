@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 		velocity.y -= moveSpeed
 	else:
 		velocity.y += gravity * delta
-		
 	move_and_slide()
 
 

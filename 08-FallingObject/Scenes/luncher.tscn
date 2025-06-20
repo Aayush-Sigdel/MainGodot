@@ -1,0 +1,281 @@
+[gd_scene load_steps=29 format=3 uid="uid://b8age18womvsm"]
+
+[ext_resource type="PackedScene" uid="uid://dhqt3nqacrkys" path="res://08-FallingObject/Scenes/chicken.tscn" id="1_0jjsd"]
+[ext_resource type="Script" uid="uid://c7p1sdvgv1qeb" path="res://08-FallingObject/Script/luncher.gd" id="1_23tqb"]
+[ext_resource type="Texture2D" uid="uid://b8hqn07i7bu7o" path="res://08-FallingObject/Assets/satyr_.png" id="3_ebn25"]
+[ext_resource type="Script" uid="uid://cto1xe45nrd3e" path="res://08-FallingObject/Script/player.gd" id="3_o3cc5"]
+[ext_resource type="Texture2D" uid="uid://dn28qodg7cxyn" path="res://08-FallingObject/Assets/basket.png" id="5_6vtvp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3cc5"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vtvp"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5axug"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5v63"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwfvy"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb6sa"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu8jk"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aw0jd"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laqyl"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l8ho"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb8wa"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kph7p"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe070"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acbwp"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pipwo"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mjp8"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag1ty"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqo43"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpwk5"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(192, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsybd"]
+atlas = ExtResource("3_ebn25")
+region = Rect2(224, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2705j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3cc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vtvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5axug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5v63")
+}],
+"loop": true,
+"name": &"idel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwfvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb6sa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yu8jk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aw0jd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laqyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l8ho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qb8wa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kph7p")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe070")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acbwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pipwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mjp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ag1ty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqo43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpwk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsybd")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vtvp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5axug"]
+size = Vector2(70, 20)
+
+[node name="Luncher" type="Node2D"]
+script = ExtResource("1_23tqb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(332, 42)
+collision_layer = 3
+collision_mask = 3
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+unique_name_in_owner = true
+polygon = PackedVector2Array(0, 0, 488, 0, 488, 564, 0, 564, 0, 574, 506, 574, 505, -6, -10, -7, -10, 574, 0, 574)
+
+[node name="PanelContainer" type="PanelContainer" parent="StaticBody2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 488.0
+offset_bottom = 564.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Chicken" parent="." instance=ExtResource("1_0jjsd")]
+position = Vector2(559, 70)
+motion_mode = 1
+
+[node name="spawnchicken" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(559, 573)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_o3cc5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+position = Vector2(3, -17)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_2705j")
+animation = &"jump"
+autoplay = "idel"
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(3, 22)
+shape = SubResource("CircleShape2D_6vtvp")
+
+[node name="Area2D" type="Area2D" parent="player"]
+
+[node name="Sprite2D" type="Sprite2D" parent="player/Area2D"]
+position = Vector2(13, -50)
+scale = Vector2(2, 2)
+texture = ExtResource("5_6vtvp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/Area2D"]
+position = Vector2(3, -40)
+shape = SubResource("RectangleShape2D_5axug")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Score:"
+
+[node name="Score" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "00"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Destroyed:"
+
+[node name="destroyed" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "00"
+
+[connection signal="timeout" from="spawnchicken" to="." method="_on_spawnchicken_timeout"]
+[connection signal="body_entered" from="player/Area2D" to="." method="_on_area_2d_body_entered"]

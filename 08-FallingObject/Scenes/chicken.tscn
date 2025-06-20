@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://dhqt3nqacrkys"]
+
+[ext_resource type="Script" uid="uid://bt8o51v8lkfkg" path="res://08-FallingObject/Script/character_body_2d.gd" id="1_d1twd"]
+[ext_resource type="Texture2D" uid="uid://bd8kqd4xssk7p" path="res://08-FallingObject/Assets/chicken-Walkt.png" id="2_7psxu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3cc5"]
+atlas = ExtResource("2_7psxu")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vtvp"]
+atlas = ExtResource("2_7psxu")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5axug"]
+atlas = ExtResource("2_7psxu")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5v63"]
+atlas = ExtResource("2_7psxu")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwfvy"]
+atlas = ExtResource("2_7psxu")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb6sa"]
+atlas = ExtResource("2_7psxu")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yu8jk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3cc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vtvp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5axug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5v63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwfvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb6sa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aw0jd"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_d1twd")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yu8jk")
+autoplay = "default"
+frame_progress = 0.0947756
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aw0jd")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(30, 0)
+collide_with_areas = true
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+target_position = Vector2(-30, 0)
+collide_with_areas = true
+
+[node name="layegg" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="layegg" to="." method="_on_layegg_timeout"]

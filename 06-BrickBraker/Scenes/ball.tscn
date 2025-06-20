@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://w0itixfgndsp"]
+
+[ext_resource type="Texture2D" uid="uid://br7wqj4tm5e1l" path="res://06-BrickBraker/Assets/ball.png" id="1_d20ip"]
+[ext_resource type="Script" uid="uid://bwcck4b252cn4" path="res://06-BrickBraker/scripts/ball.gd" id="1_fdlj6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fdlj6"]
+radius = 3.0
+
+[node name="ball" type="CharacterBody2D"]
+script = ExtResource("1_fdlj6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fdlj6")
+debug_color = Color(0.858824, 0, 0, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_d20ip")
